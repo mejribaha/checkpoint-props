@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Profile from "./profile/profile";
+import "./App.css";
 
 function App() {
+  const handleName = () => {
+    alert("Pablo Emilio Escobar Gaviria");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+        fullName="Pablo Emilio Escobar Gaviria"
+        bio="Pablo Emilio Escobar Gaviria, né le 1ᵉʳ décembre 1949 à Rionegro, Antioquia, Colombie, et mort le 2 décembre 1993 à Medellín."
+        profession="Trafiquant de cocaïne"
+        handleName={handleName}
+      >
+        <img
+          src="./assets/pablo.jpg"
+          alt="profile"
+          style={{ width: "500px",height: "300px" , borderRadius:"15px"}}
+        />
+      </Profile>
     </div>
   );
 }
